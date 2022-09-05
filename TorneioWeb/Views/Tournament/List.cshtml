@@ -1,0 +1,78 @@
+﻿@model List<FighterModel>
+
+@{
+    ViewData["Title"] = "Lutadores";
+}
+
+<link rel="stylesheet" href="~/css/lutadores.css" />
+
+<h1 class="title">Lutadores</h1>
+
+<div class="divMain">
+
+    <div class="a">
+        Total de lutadores: @(Model.Count)
+    </div>
+
+    <div class="divTorneio">
+        <a class="btn btn-outline-primary" asp-controller="Tournament" asp-action="Tournament">Torneio</a>
+    </div>
+
+    <div class="divInicio">
+        <a class="btn btn-outline-success" asp-controller="Home" asp-action="Welcome">Home</a>
+    </div>
+
+</div>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr class="table-header">
+            <th>
+                Nome
+            </th>
+            <th>
+                Idade
+            </th>
+            <th>
+                Artes Marciais
+            </th>
+            <th>
+                Quantidade de Lutas
+            </th>
+            <th>
+                Quantidade de Derrotas
+            </th>
+            <th>
+                Quantidade de Vitorias
+            </th>
+        </tr>
+    </thead>
+    <tbody class="table-body">
+        @foreach (var fighter in Model)
+        {
+            <tr>
+                <td>
+                    @fighter.Name
+                </td>
+                <td>
+                    @fighter.Age
+                </td>
+                <td>
+                    @fighter.QtyMartialArts
+                </td>
+                <td>
+                    @fighter.QtyFights
+                </td>
+                <td>
+                    @fighter.QtyDefeats
+                </td>
+                <td>
+                    @fighter.QtyVictories
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

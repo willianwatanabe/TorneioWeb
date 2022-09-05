@@ -1,0 +1,11 @@
+.vs/*
+bin/*
+obj/*
+TorneioWeb/bin
+TorneioWeb/obj
+.vs
+bin
+obj
+.vs/
+bin/
+obj/

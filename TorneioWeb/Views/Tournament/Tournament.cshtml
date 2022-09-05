@@ -1,0 +1,60 @@
+﻿@model List<FighterModel>;
+
+
+@{
+    ViewData["Title"] = "Torneio";
+}
+
+<link rel="stylesheet" href="~/css/home.css" />
+
+
+<form method="post" action="@Url.Action("StartTournament", "Tournament")">
+    <div>
+        <p class="select-lutadores"><strong>Selecione os 16 lutadores</strong> </p>
+    </div>
+
+    <div class="divInicial">
+        <div class="divIniciar">
+            <input class="btn btn-outline-primary" type="submit" value="Iniciar" />
+        </div>
+
+        <div class="divLista">
+            <a class="btn btn-outline-info" asp-controller="Tournament" asp-action="List">Tabela Lutadores</a>
+        </div>
+
+        <div class="divHome">
+            <a class="btn btn-outline-success" asp-controller="Home" asp-action="Welcome">Home</a>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="listaCards" style="width:100%; display:grid; grid-template-columns: repeat(4, 1fr);">
+        @foreach (var lutador in Model)
+        {
+            <div class="cardLutador" id="@lutador.Id" style="border: 2px solid #000000; background-color: #14161e87; border-radius: 5px; ">
+
+                <div class="card-body">
+                    <div><img class="cardLutador" src="~/img/@(lutador.Id).png" /></div>
+
+                    <input class="checkbox" type="checkbox" checked Id="@lutador.Id" name="@lutador.Id" required />
+
+                    <div class="headCardLutador">
+                        <span><strong>@lutador.Name</strong></span>
+                    </div>
+                    <div class="bodyCardLutador">
+                        Idade: @lutador.Age
+                        <br />
+                        Vitorias: @lutador.QtyVictories
+                        <br />
+                        Derrotas: @lutador.QtyDefeats
+                        <br />
+                        Total de Lutas: @lutador.QtyFights
+                        <br />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</form>
+

@@ -1,0 +1,73 @@
+﻿body {
+    background: url("../img/card.png") fixed;
+}
+
+.title {
+    color: white;
+    text-align: center;
+}
+
+.a {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.table-header {
+    font-size: 20px;
+    align-content: center;
+    text-align: center;
+    opacity: 1;
+}
+
+.table-body {
+    text-align: center;
+    opacity: 1;
+}
+
+.table {
+    background-color: #c1c8cf;
+    border-spacing: 0;
+    opacity: 0.9;
+    border-radius: 50px;
+}
+
+body img {
+    position: absolute;
+    opacity: 1;
+}
+
+.table thead th {
+    vertical-align: inherit;
+    border-bottom: 2px solid #000000;
+}
+
+.table td, .table th {
+    padding: 10px;
+    border-top: 1px solid #000000;
+}
+
+th {
+    text-align: center;
+}
+
+.divMain {
+    display: inline-flex;
+    padding: 7px 0 7px 17px;
+}
+
+.divTorneio {
+    padding: 0 0 2px 520px;
+}
+
+.divInicio {
+    padding: 0 0 2px 25px;
+}
+
+.btn {
+    padding: 5px 40px;
+    font-size: 18px;
+    border-radius: 3.25rem;
+    font-weight: bolder;
+    border-width: medium;
+}

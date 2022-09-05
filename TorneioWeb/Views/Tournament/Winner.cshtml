@@ -1,0 +1,37 @@
+﻿@model FighterModel;
+
+@{
+    ViewData["Title"] = "Campeão";
+}
+
+<link rel="stylesheet" href="~/css/resultado.css" />
+
+<center>
+    <h1 style="color: #ffffffbf">Vencedor</h1>
+</center>
+
+<div class="cardConteudo">
+    <div class="cardVencedor">
+        <div>
+            <img class="cardLutador" src="~/img/@(Model.Id).png" />
+
+            <div class="headCardLutador">
+                <strong>@Model.Name</strong>
+            </div>
+            <strong>
+                Idade: @Model.Age
+                <br />
+                Total de Lutas: @Model.QtyFights
+                <br />
+                Vitorias: @Model.QtyVictories
+                <br />
+                Derrotas: @Model.QtyDefeats
+                <br />
+            </strong>
+        </div>
+    </div>
+</div>
+
+<div class="button-resultado">
+    <a class="btn btn-success" asp-area="" asp-controller="Tournament" asp-action="Tournament">Jogar Novamente</a>
+</div>

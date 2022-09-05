@@ -1,0 +1,107 @@
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.back {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+.container {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.card {
+  cursor: pointer;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 250px;
+  border-radius: 3px;
+  display: flex;
+  align-items: flex-end;
+  position: relative; 
+}
+
+.card.is-selected {
+  border: 4px solid #d2ae4b;
+}
+.card.is-selected:before {
+  animation: pulse 0.5s infinite;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffcb3b;
+  border-radius: 3px;
+  transform: scale(0);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.info {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+    justify-content: flex-end;
+    color: white;
+    padding: 0 14px;
+}
+.info h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 24px;
+  margin: 10px 0 3px 0;
+  font-weight: 500;
+}
+h4,
+p,
+span {
+  font-family: "Antonio", sans-serif;
+  font-size: 14px;
+}
+span {
+  color: #fff3d2;
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-size: 10px;
+}
+h4 {
+  color: #68696b;
+}
+.info-numerica-card {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.info-numerica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
